@@ -28,6 +28,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		B39799BD2D54A20500128CF9 /* Utils */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Utils; sourceTree = "<group>"; };
 		B3D1A7FB2D2E66EB0053940A /* Views */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Views; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
@@ -63,6 +64,7 @@
 		B302F3EB2BCE69CF009A662C /* MySwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				B39799BD2D54A20500128CF9 /* Utils */,
 				B3D1A7FB2D2E66EB0053940A /* Views */,
 				B3AFE2FC2BDE2A5300021BB9 /* Models */,
 				B302F3EC2BCE69CF009A662C /* MySwiftUIApp.swift */,
@@ -106,6 +108,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				B39799BD2D54A20500128CF9 /* Utils */,
 				B3D1A7FB2D2E66EB0053940A /* Views */,
 			);
 			name = MySwiftUI;

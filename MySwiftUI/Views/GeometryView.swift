@@ -8,31 +8,21 @@
 import SwiftUI
 
 struct GeometryView: View {
-    var body: some View {
-        GeometryReader { geometry in
-              VStack(spacing: 10) {
-                Text("GeometryReader")
-                  .font(.title)
-                Text("Buttons example")
-                  .font(.subheadline)
-                
-                HStack() {
-                  Button("Button 1") {}
-                    .frame(width: geometry.size.width/3, height: 50)
-                    .background(.orange)
-                  Button("Button 2") {}
-                    .frame(width: geometry.size.width/3, height: 50)
-                    .background(.yellow)
-                  Button("Button 3") {}
-                    .frame(width: geometry.size.width/3, height: 50)
-                    .background(.green)
-                }
-              }
-            }
+    @State var size: CGSize = .zero
         
-    }
+        var body: some View {
+            VStack {
+                Text("text width: \(String(format: "%.2f", size.width))")
+                Text("text height: \(String(format: "%.2f", size.height))")
+                
+                Text("hello")
+                    .saveSize(in: $size)
+                    .background(Color.yellow)
+            }
+            
+        }
 }
 
 #Preview {
-    ContentView()
+    GeometryView()
 }

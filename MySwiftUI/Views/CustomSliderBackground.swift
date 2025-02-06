@@ -30,6 +30,13 @@ struct CustomSliderBackground: View {
                     .padding(.trailing, 5)
             }
         }
+        .gesture(DragGesture(minimumDistance: 0)
+            .onChanged({ value in
+                print(value)
+            }))
+        .gesture(TapGesture().onEnded({ value in
+            print(value)
+        }))
     }
 }
 

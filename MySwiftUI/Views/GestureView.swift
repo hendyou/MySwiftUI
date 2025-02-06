@@ -8,8 +8,19 @@
 import SwiftUI
 
 struct GestureView: View {
+    @State private var offset: CGPoint = .zero
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("\(Int(offset.x))")
+        
+        Rectangle()
+            .fill(Color.blue)
+            .frame(width: 300, height: 100)
+            .gesture(DragGesture(minimumDistance: 0)
+                .onChanged({ value in
+//                    print(value.location.x)
+                    offset.x = value.location.x
+                }))
     }
 }
 
